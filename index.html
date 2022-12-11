@@ -14,16 +14,22 @@
                 document.write("<br><br>");
             }
 
+            function imprima(mensagem){
+
+                var mensagem;
+                document.write(mensagem);
+            }
+
             var ano = 2022;
 
-            document.write("Felipe tem " + (ano - 2000) + " de idade");
+            imprima("Felipe tem " + (ano - 2000) + " de idade");
             pulaLinha();
-            
-            document.write("João tem " + (ano - 1980) + " de idade");
+
+            imprima("João tem " + (ano - 1980) + " de idade");
             pulaLinha();
 
             var media = (22 + 42)/ 2;
-            document.write("A média de idade é: " + Math.round(media));
+            imprima("A média de idade é: " + Math.round(media));
 
         </script>
 
