@@ -5,21 +5,28 @@
 <button>Enter</button>
 
 <script>
+// (Math.round = arredonda o numero) (Math.random = pega um numero aleatório)
+// segredo random: var segredo = Math.round(Math.random() * 10)
 
-var segredo = 5;
+var segredos = [5, 7, 8];
 
-var input = document.querySelector("input");
+var resultadoInput = document.querySelector("input");
+resultadoInput.focus();
 
 function verifica() {
 
-    if (input.value == segredo){
+    for (var posicao = 0; posicao < segredos.length; posicao++) {
 
-        alert("VOCÊ ACERTOU!!!");
-    }
-    else {
+        if (resultadoInput.value == segredos[posicao]){
 
-        alert("VOCÊ ERROU!!!")
+            alert("VOCÊ ACERTOU!!!");
+            break;
+        }
     }
+
+    resultadoInput.value = "";
+
+    resultadoInput.focus();
 
 }
 
