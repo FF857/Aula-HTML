@@ -1,16 +1,38 @@
-
 <meta charset="UTF-8">
 
 
-<input>
+<input/>
 <button>Enter</button>
 
-
 <script>
+// (Math.round = arredonda o numero) (Math.random = pega um numero aleatório)
+// segredo random: var segredo = Math.round(Math.random() * 10)
 
-    var numero = document.querySelector("input");
+var segredos = [5, 7, 8];
 
-    var segredo = Math.round(Math.random() * 10);
+var resultadoInput = document.querySelector("input");
+resultadoInput.focus();
+
+function verifica() {
+
+    for (var posicao = 0; posicao < segredos.length; posicao++) {
+
+        if (resultadoInput.value == segredos[posicao]){
+
+            alert("VOCÊ ACERTOU!!!");
+            break;
+        }
+    }
+
+    resultadoInput.value = "";
+
+    resultadoInput.focus();
+
+}
+
+var button = document.querySelector("button");
+
+    button.onclick = verifica;
 
 
     function verifica(){
